@@ -4,6 +4,9 @@ import { timingSafeEqual } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { leadFormSchema } from '@/lib/validation'
 
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
+
 // POST /api/leads — public endpoint for the contact form.
 // Validates with Zod, inserts via Prisma. Returns { success: true } on 200.
 export async function POST(req: Request) {
