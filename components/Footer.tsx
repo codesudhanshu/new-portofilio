@@ -133,7 +133,7 @@ export function Footer() {
             href="/terms"
             className="transition-colors hover:text-cream"
           >
-            Terms
+            Terms & Conditions
           </Link>
           <span className="font-medium tracking-wide text-cream/45">
             Crafted in Noida

@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 import { about, company } from '@/lib/copy'
@@ -193,11 +194,14 @@ export default function Content() {
                 className="group"
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-cream/10 bg-[#13181A]">
-                  {/* Placeholder portrait — cool deep-space gradient + initial */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#1a1f1d] via-[#080C0A] to-[#1a1f1d]" />
-                  <div className="absolute inset-0 flex items-center justify-center text-display text-[96px] tracking-[-0.02em] text-cream/[0.08] select-none">
-                    {member.name.charAt(0)}
-                  </div>
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 h-px origin-left scale-x-0 bg-vermilion shadow-[0_0_8px_rgba(232,71,42,0.5)] transition-transform duration-700 group-hover:scale-x-100" />
                 </div>
                 <h3 className="mt-4 text-display text-xl leading-tight tracking-[-0.02em] text-cream">

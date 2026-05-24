@@ -286,10 +286,26 @@ export const about = {
     'Long horizons over quick wins.',
   ],
   team: [
-    { name: 'Engineering', role: 'Architecture, build, run.' },
-    { name: 'Studio', role: 'Design, brand, story.' },
-    { name: 'Growth', role: 'Search, ads, lifecycle.' },
-    { name: 'Talent', role: 'Sourcing, vetting, placement.' },
+    {
+      name: 'Engineering',
+      role: 'Architecture, build, run.',
+      img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&auto=format&fit=crop',
+    },
+    {
+      name: 'Studio',
+      role: 'Design, brand, story.',
+      img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=640&q=80&auto=format&fit=crop',
+    },
+    {
+      name: 'Growth',
+      role: 'Search, ads, lifecycle.',
+      img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&q=80&auto=format&fit=crop',
+    },
+    {
+      name: 'Talent',
+      role: 'Sourcing, vetting, placement.',
+      img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=640&q=80&auto=format&fit=crop',
+    },
   ],
 }
 
