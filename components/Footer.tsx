@@ -11,9 +11,9 @@ export function Footer() {
             <Image
               src="/logo.png"
               alt="Biech Software Technologies"
-              width={160}
-              height={64}
-              className="h-12 w-auto object-contain"
+              width={240}
+              height={96}
+              className="h-20 w-auto object-contain"
             />
           </Link>
 
