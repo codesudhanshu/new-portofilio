@@ -139,7 +139,7 @@ export default function HomeContent() {
                 {home.hero.ctaPrimary}
               </Link>
               <Link
-                href="/about"
+                href="/work"
                 className="inline-flex h-12 items-center justify-center rounded-full border border-cream/35 px-7 text-sm font-medium text-cream transition-all duration-300 hover:border-cream hover:bg-cream hover:text-ink"
               >
                 {home.hero.ctaSecondary}

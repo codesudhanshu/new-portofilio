@@ -1,21 +1,22 @@
 // Single source of truth for marketing copy. Rewrite voice in one place.
 
 export const company = {
-  legal: 'Biech Software Solutions Pvt. Ltd.',
+  legal: 'Biech Software Technologies Pvt. Ltd.',
   short: 'Biech',
-  tagline: 'Software · Marketing · Staffing',
-  city: 'Noida, India',
-  email: 'hello@biech.in',
-  phone: '+91 120 000 0000',
+  tagline: 'Innovate · Develop · Deliver',
+  city: 'Greater Noida, India',
+  email: 'Softwaretechnologiesbiech@gmail.com',
+  phone: '+91 8796938004',
+  gst: '09AAOCB6612Q1ZY',
   address: {
-    line1: 'Sector 62, Noida 201309',
-    line2: 'Uttar Pradesh, India',
+    line1: '14th Floor, 1406 Galaxy Diamond Plaza',
+    line2: 'Sector 4, Greater Noida, G.B. Nagar, UP 201306',
   },
 }
 
 export const home = {
   hero: {
-    eyebrow: 'Noida, India · Software · Marketing · Staffing',
+    eyebrow: 'Greater Noida, India · Software · Marketing · Staffing',
     line1: 'We Build Digital',
     line2: 'Products That Matter.',
     sub: 'A small Noida studio building tools, growth engines, and engineering teams for ambitious companies — domestic and abroad.',

@@ -199,7 +199,7 @@ export function LeadForm({ tone = 'light' }: { tone?: 'light' | 'dark' }) {
               </div>
             )}
 
-            <div className="flex items-center justify-between gap-4 pt-2">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
               <p
                 className={
                   isDark ? 'text-xs text-cream/55' : 'text-xs text-ink/55'

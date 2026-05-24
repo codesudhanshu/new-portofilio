@@ -35,8 +35,8 @@ export function ServiceCard({
         href={href}
         className={
           isDark
-            ? 'group relative flex h-full min-h-[420px] flex-col rounded-3xl border border-cream/12 bg-[#0F1311] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#B6FFC4]/55 hover:bg-[#131814] md:p-10'
-            : 'group relative flex h-full min-h-[420px] flex-col rounded-3xl border border-ink/15 bg-cream p-8 transition-all duration-300 hover:-translate-y-1 hover:border-vermilion hover:bg-muted/55 md:p-10'
+            ? 'group relative flex h-full min-h-[300px] md:min-h-[420px] flex-col rounded-3xl border border-cream/12 bg-[#0F1311] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#B6FFC4]/55 hover:bg-[#131814] md:p-10'
+            : 'group relative flex h-full min-h-[300px] md:min-h-[420px] flex-col rounded-3xl border border-ink/15 bg-cream p-8 transition-all duration-300 hover:-translate-y-1 hover:border-vermilion hover:bg-muted/55 md:p-10'
         }
       >
         {/* Card index — terminal style, only in dark variant */}

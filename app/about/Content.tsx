@@ -93,7 +93,7 @@ export default function Content() {
       </section>
 
       {/* STORY — deep space, log-entry typography */}
-      <section className="bg-black py-28 text-cream md:py-36">
+      <section className="overflow-hidden bg-black py-28 text-cream md:py-36">
         <div className="container-x">
           <div className="relative max-w-[640px]">
             {/* glowing margin marker — like a spacecraft log rule */}
