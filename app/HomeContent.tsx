@@ -515,7 +515,7 @@ export default function HomeContent() {
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {CASE_STUDIES.map((c, i) => (
-              <RevealCard key={c.title} delay={i * 0.12}>
+              <RevealCard key={c.title}>
                 <div className="glass card-glow group flex flex-col rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_80px_rgba(0,0,0,0.4)]">
                   <span className={`inline-flex w-fit rounded-full bg-gradient-to-r ${c.tagColor} px-3 py-1 text-[11px] font-bold text-white`}>
                     {c.tag}
