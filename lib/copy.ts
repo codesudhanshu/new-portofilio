@@ -7,7 +7,9 @@ export const company = {
   city: 'Greater Noida, India',
   email: 'Softwaretechnologiesbiech@gmail.com',
   phone: '+91 8796938004',
+  whatsapp: '+918796938004',
   gst: '09AAOCB6612Q1ZY',
+  founded: '2015',
   address: {
     line1: '14th Floor, 1406 Galaxy Diamond Plaza',
     line2: 'Sector 4, Greater Noida, G.B. Nagar, UP 201306',
@@ -16,10 +18,10 @@ export const company = {
 
 export const home = {
   hero: {
-    eyebrow: 'Greater Noida, India · Software · Marketing · Staffing',
+    eyebrow: 'Est. 2015 · Greater Noida · Software · Marketing · Staffing',
     line1: 'We Build Digital',
     line2: 'Products That Matter.',
-    sub: 'A small Noida studio building tools, growth engines, and engineering teams for ambitious companies — domestic and abroad.',
+    sub: 'Since 2015, we\'ve shipped 50+ products, run campaigns that compound, and placed engineers who deliver — for businesses in India, the US, UK, and beyond.',
     ctaPrimary: 'Start a Project',
     ctaSecondary: 'See Our Work',
   },
@@ -49,9 +51,9 @@ export const home = {
     ],
   },
   stats: [
+    { value: 10, suffix: '+', label: 'Years in business' },
     { value: 50, suffix: '+', label: 'Projects shipped' },
     { value: 30, suffix: '+', label: 'Clients served' },
-    { value: 3, suffix: '', label: 'Cities engaged' },
     { value: 100, suffix: '%', label: 'On-time delivery' },
   ],
   why: {
@@ -60,6 +62,10 @@ export const home = {
     quote:
       '"Software is built by humans, for humans. We never forget that — and it shows in the work."',
     points: [
+      {
+        title: '10 years of delivery — not promises',
+        body: 'Since 2015, we have shipped 50+ products across software, marketing, and staffing. The track record speaks before we do.',
+      },
       {
         title: 'Senior people on every brief',
         body: 'No bait-and-switch after sales. The engineer or strategist you meet on day one is the one who delivers.',
@@ -71,10 +77,6 @@ export const home = {
       {
         title: 'Code and accounts you fully own',
         body: 'No vendor lock-in by design. Repos, ad accounts, hires — all yours, from the first commit.',
-      },
-      {
-        title: 'IST + flexible global overlap',
-        body: 'We routinely work with US, UK, and GCC clients. Async by default, with live overlap when it matters.',
       },
     ],
   },
@@ -276,9 +278,9 @@ export const about = {
     h1: 'A studio for work worth doing well.',
   },
   story: [
-    'Biech began the way most good things do — with a small group of engineers who had spent enough years inside larger shops to know the difference between work that mattered and work that did not.',
+    'Biech began in 2015 the way most good things do — with a small group of engineers who had spent enough years inside larger shops to know the difference between work that mattered and work that did not.',
     'We chose Noida because it is home, and because the talent here does not get the credit it deserves. We chose three services — software, marketing, staffing — because the companies we wanted to work with usually needed all three, and because keeping them under one roof means we can move faster than three separate vendors ever could.',
-    'We are small on purpose. Every brief gets attention from a senior person. Every deadline is one we have thought hard about before we promised it. Every line of code, every campaign, every candidate we send — we would put our name on it. And we do.',
+    'Ten years on, we are still small on purpose. Every brief gets attention from a senior person. Every deadline is one we have thought hard about before we promised it. Every line of code, every campaign, every candidate we send — we would put our name on it. And we do.',
   ],
   values: [
     'Craft over volume.',
@@ -318,9 +320,46 @@ export const contact = {
   channels: [
     { label: 'Email', value: company.email },
     { label: 'Phone', value: company.phone },
+    { label: 'WhatsApp', value: company.whatsapp },
     { label: 'Hours', value: 'Mon–Fri · 10:00–19:00 IST' },
   ],
 }
+
+export const commitments = [
+  { icon: '✅', title: '100% Satisfaction Guarantee', body: 'Not happy with the output? We fix it or refund it. No debates.' },
+  { icon: '🏆', title: 'Senior People Always', body: 'The engineer or strategist you meet on day one is the one who delivers. No bait-and-switch.' },
+  { icon: '📅', title: '95% On-Time Delivery', body: 'We over-engineer the estimate so you do not face surprises. Deadlines are commitments.' },
+  { icon: '🔒', title: 'Strict NDA Policy', body: 'Every engagement begins with a signed NDA. Your ideas, code, and data stay yours.' },
+  { icon: '🕐', title: '24 / 7 Support', body: 'Production issues do not respect business hours. Neither do we on the projects we own.' },
+  { icon: '💰', title: 'Flexible Engagement Models', body: 'Fixed price, time & material, or dedicated team — matched to your budget and timeline.' },
+]
+
+export const faqs = [
+  { q: 'How long does a typical project take?', a: 'A simple MVP takes 6–10 weeks. A full-featured product is typically 3–6 months. We define scope and timeline before we start, in writing.' },
+  { q: 'What is your pricing model?', a: 'We offer fixed-price projects (best for well-defined scope), time & material (best for evolving projects), and dedicated team retainers. We share a detailed estimate before any engagement begins.' },
+  { q: 'Do you work with early-stage startups?', a: 'Yes. A significant portion of our work is with founders building their first product. We are used to working with limited budgets and helping prioritise scope ruthlessly.' },
+  { q: 'Do you sign NDAs?', a: 'Always. We sign an NDA before any technical discussion begins. Your ideas, IP, and data are protected from day one.' },
+  { q: 'Which technologies do you work with?', a: 'Primarily: TypeScript, React, Next.js, Node.js, Python, Go, PostgreSQL, MongoDB, AWS, and GCP. We use what fits the project — not what is trending on Twitter.' },
+  { q: 'How do we get started?', a: 'Send us a message or WhatsApp us. We will respond within one working day, set up a 30-minute call, and come back with a written proposal within a week.' },
+]
+
+export const testimonials = [
+  {
+    quote: 'Biech delivered a production-ready SaaS platform in under 3 months. Every sprint had something shippable. No surprises, no excuses.',
+    name: 'Rahul M.',
+    title: 'Founder, B2B SaaS · Gurugram',
+  },
+  {
+    quote: 'We went from 0 to 40,000 learners in 30 days. The platform handled it. That kind of engineering confidence is rare.',
+    name: 'Priya S.',
+    title: 'Co-founder, EdTech · Delhi',
+  },
+  {
+    quote: 'They rebuilt our entire ad attribution and ROAS went from 1.4× to 4.2× in one quarter. I wish we had called them sooner.',
+    name: 'Arjun K.',
+    title: 'Head of Growth, D2C Brand · Noida',
+  },
+]
 
 export const nav = {
   links: [

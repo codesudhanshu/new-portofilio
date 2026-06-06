@@ -1,37 +1,30 @@
 import type { Metadata } from 'next'
-import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { SmoothScroll } from './providers/SmoothScroll'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { WhatsAppButton } from '@/components/WhatsAppButton'
 
-const display = Fraunces({
+const inter = Inter({
   subsets: ['latin'],
-  style: ['normal', 'italic'],
-  axes: ['SOFT', 'WONK', 'opsz'],
-  variable: '--font-display',
-  display: 'swap',
-})
-
-const sans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-sans',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Biech — Software, Marketing, Staffing · Noida, India',
+    default: 'Biech Software Technologies — Software, Marketing, Staffing · Greater Noida',
     template: '%s · Biech',
   },
   description:
-    'Biech Software Solutions builds digital products, growth engines, and engineering teams for ambitious companies. A small Noida studio, working globally.',
+    'Biech Software Technologies Pvt. Ltd. — 10 years of shipping software, running growth campaigns, and placing engineering talent. Greater Noida studio, working globally since 2015.',
   metadataBase: new URL('https://biech.in'),
   openGraph: {
-    title: 'Biech Software Solutions',
+    title: 'Biech Software Technologies Pvt. Ltd.',
     description:
-      'Software · Marketing · Staffing. A studio for work worth doing well. Noida, India.',
+      'Software · Marketing · Staffing. 10 years of delivery. Greater Noida, India.',
     type: 'website',
     locale: 'en_IN',
   },
@@ -44,13 +37,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
-      <body className="bg-cream text-ink antialiased">
-        <div aria-hidden className="grain-overlay" />
+    <html lang="en" className={inter.variable}>
+      <body className="bg-[#0A0A0A] text-white antialiased">
         <SmoothScroll>
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <WhatsAppButton />
         </SmoothScroll>
       </body>
     </html>

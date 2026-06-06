@@ -1,164 +1,98 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
-
 import { contact, company } from '@/lib/copy'
 import { LeadForm } from '@/components/LeadForm'
 
-const LogogramScene = dynamic(
-  () => import('@/components/LogogramScene').then((m) => m.LogogramScene),
-  { ssr: false }
-)
-
-// Arrival — warm cream "ink" against misty teal-grey
-const INK = '#E8DDC9'
-
 export default function Content() {
   return (
-    <section
-      className="relative overflow-hidden bg-[#0E1418] py-20 text-cream md:py-28"
-      style={{ ['--accent' as string]: INK }}
-    >
-      {/* Atmospheric backdrop — heavy fog */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-0"
-        style={{
-          background:
-            'radial-gradient(ellipse 60% 70% at 75% 50%, rgba(123,152,175,0.08) 0%, transparent 60%), radial-gradient(ellipse 70% 50% at 15% 100%, rgba(232,221,201,0.04) 0%, transparent 65%)',
-        }}
-      />
-      {/* Logogram drifts on the right side, slowly forming + dissolving */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-[1] hidden w-[55%] opacity-80 md:block lg:w-[50%]">
-        <LogogramScene />
-      </div>
-      {/* Mobile: logogram as faint full-width backdrop */}
-      <div className="pointer-events-none absolute inset-0 z-[1] opacity-30 md:hidden">
-        <LogogramScene />
-      </div>
-      {/* Scan-lines for cinematic cohesion with the rest of the site */}
-      <div
-        aria-hidden
-        className="scanlines pointer-events-none absolute inset-0 z-[2] opacity-40"
-      />
-      {/* Vignette */}
-      <div
-        aria-hidden
-        className="vignette-dark pointer-events-none absolute inset-0 z-[2]"
-      />
-
-      <div className="container-x relative z-10">
-        {/* Editorial / terminal header */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="flex items-baseline gap-4"
-        >
-          <span
-            className="font-sans text-[11px] uppercase tracking-[0.22em]"
-            style={{ color: INK }}
-          >
-            ▸ 01 / {contact.hero.eyebrow}
-          </span>
-          <span className="h-px flex-1 bg-cream/15" aria-hidden />
-          <span className="font-sans text-[11px] uppercase tracking-[0.22em] text-cream/55">
-            SYS://OPEN_CHANNEL
-          </span>
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.85,
-            delay: 0.1,
-            ease: [0.65, 0, 0.35, 1],
-          }}
-          className="mt-6 max-w-3xl text-display text-[clamp(34px,5.2vw,68px)] leading-[1.04] tracking-[-0.02em] text-balance text-cream"
-        >
-          {contact.hero.h1}
-          <span className="terminal-cursor" aria-hidden />
-        </motion.h1>
-        {contact.hero.sub && (
-          <motion.p
+    <section className="bg-[#0B0F19]">
+      {/* Header */}
+      <div className="border-b border-white/8 bg-[#0F1624]">
+        <div className="container-x py-16 md:py-20">
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.32 }}
-            className="mt-6 max-w-2xl text-base leading-relaxed text-cream/72 md:text-[17px]"
+            transition={{ duration: 0.45 }}
           >
-            {contact.hero.sub}
-          </motion.p>
-        )}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.55 }}
-          className="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-sans text-[10px] uppercase tracking-[0.24em] text-cream/45"
-        >
-          <span>STATUS · LISTENING</span>
-          <span className="text-cream/30">/</span>
-          <span>NODE · NOIDA-01</span>
-          <span className="text-cream/30">/</span>
-          <span>RESPONSE · 24H</span>
-        </motion.div>
+            <span className="section-label">{contact.hero.eyebrow}</span>
+            <h1 className="mt-3 text-[clamp(32px,5vw,64px)] font-black leading-[1.04] tracking-[-0.03em] text-[#0F0F0F]">
+              {contact.hero.h1}
+            </h1>
+            {contact.hero.sub && (
+              <p className="mt-4 max-w-xl text-base text-white/50">{contact.hero.sub}</p>
+            )}
+          </motion.div>
+        </div>
+      </div>
 
-        <div className="mt-16 grid gap-14 md:mt-20 md:grid-cols-12 md:gap-16">
+      {/* Content */}
+      <div className="container-x py-14 md:py-20">
+        <div className="grid gap-12 md:grid-cols-12 md:gap-16">
+          {/* Sidebar */}
           <motion.aside
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="md:col-span-5"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="md:col-span-4"
           >
-            <div className="space-y-10">
-              {contact.channels.map((c) => (
-                <div
-                  key={c.label}
-                  className="border-t border-cream/15 pt-6"
+            <div className="space-y-8">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/35">Email</p>
+                <a
+                  href={`mailto:${company.email}`}
+                  className="mt-2 block text-lg font-semibold text-[#0F0F0F] transition-colors hover:text-vermilion break-all"
                 >
-                  <p className="font-sans text-xs uppercase tracking-[0.18em] text-cream/55">
-                    {c.label}
-                  </p>
-                  {c.label === 'Email' ? (
-                    <a
-                      href={`mailto:${c.value}`}
-                      className="mt-2 block text-display text-2xl tracking-[-0.02em] text-cream transition-colors hover:text-vermilion"
-                    >
-                      {c.value}
-                    </a>
-                  ) : (
-                    <p className="mt-2 text-display text-2xl tracking-[-0.02em] text-cream">
-                      {c.value}
-                    </p>
-                  )}
-                </div>
-              ))}
-              <div className="border-t border-cream/15 pt-6">
-                <p className="font-sans text-xs uppercase tracking-[0.18em] text-cream/55">
-                  Studio
-                </p>
-                <p className="mt-3 text-base leading-relaxed text-cream/75">
-                  {company.legal}
-                  <br />
-                  {company.address.line1}
-                  <br />
+                  {company.email}
+                </a>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/35">Phone</p>
+                <a
+                  href={`tel:${company.phone}`}
+                  className="mt-2 block text-lg font-semibold text-[#0F0F0F] transition-colors hover:text-vermilion"
+                >
+                  {company.phone}
+                </a>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/35">WhatsApp</p>
+                <a
+                  href={`https://wa.me/${company.whatsapp}?text=Hi%2C%20I%20found%20Biech%20online%20and%20would%20like%20to%20discuss%20a%20project.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 flex items-center gap-2 text-lg font-semibold text-[#0F0F0F] transition-colors hover:text-[#25D366]"
+                >
+                  <svg viewBox="0 0 32 32" className="h-5 w-5 shrink-0 fill-[#25D366]" aria-hidden>
+                    <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.68 4.61 1.857 6.5L4 29l7.703-1.82A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.94 9.94 0 0 1-5.02-1.352l-.36-.213-3.735.882.918-3.622-.234-.376A9.944 9.944 0 0 1 6 15c0-5.523 4.477-10 10-10zm-3.5 5c-.277 0-.58.006-.836.263-.278.278-1.164 1.14-1.164 2.78 0 1.641 1.193 3.225 1.359 3.448.167.222 2.313 3.725 5.703 5.078 2.818 1.114 3.39.893 4.003.837.614-.056 1.976-.808 2.254-1.587.279-.78.279-1.447.195-1.587-.083-.14-.306-.222-.64-.39-.334-.167-1.976-.975-2.282-1.086-.306-.11-.528-.167-.75.167-.222.333-.862 1.085-1.057 1.308-.195.222-.39.25-.724.083-.334-.167-1.41-.52-2.686-1.657-1-.894-1.674-1.997-1.87-2.33-.195-.334-.02-.515.147-.68.15-.15.334-.39.5-.585.167-.195.222-.334.334-.557.11-.222.056-.418-.028-.585-.083-.167-.742-1.813-1.028-2.474-.269-.632-.543-.543-.75-.553a14.8 14.8 0 0 0-.64-.01z" />
+                  </svg>
+                  Chat on WhatsApp
+                </a>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/35">Hours</p>
+                <p className="mt-2 text-base text-white/55">Mon–Fri · 10:00–19:00 IST</p>
+              </div>
+              <div className="border-t border-white/8 pt-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/35">Studio</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/50">
+                  {company.legal}<br />
+                  {company.address.line1}<br />
                   {company.address.line2}
                 </p>
               </div>
             </div>
           </motion.aside>
 
+          {/* Form */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="md:col-span-7"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="md:col-span-8"
           >
-            <div className="rounded-3xl border border-cream/10 bg-[#0A0F12]/85 p-7 backdrop-blur-sm md:p-10">
-              <LeadForm tone="dark" />
+            <div className="rounded-2xl border border-white/8 bg-[#161c2a] p-7 md:p-10">
+              <LeadForm tone="light" />
             </div>
           </motion.div>
         </div>

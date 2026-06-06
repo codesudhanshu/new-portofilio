@@ -16,7 +16,7 @@ const config: Config = {
         canvas: '#0F0E0D',
       },
       fontFamily: {
-        display: ['var(--font-display)', 'serif'],
+        display: ['var(--font-sans)', 'sans-serif'],
         sans: ['var(--font-sans)', 'sans-serif'],
       },
       letterSpacing: {

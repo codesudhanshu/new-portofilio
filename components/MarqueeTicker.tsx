@@ -13,8 +13,8 @@ export function MarqueeTicker({
     <div
       className={
         isDark
-          ? 'overflow-hidden border-y border-cream/10 bg-[#0A0E0D] py-7'
-          : 'overflow-hidden border-y border-ink/10 bg-cream py-7'
+          ? 'overflow-hidden border-y border-white/8 bg-[#0F1624] py-7'
+          : 'overflow-hidden border-y border-white/8 bg-[#0F1624] py-7'
       }
     >
       <div className="flex w-max animate-marquee items-center gap-12 whitespace-nowrap">
@@ -23,8 +23,8 @@ export function MarqueeTicker({
             <span
               className={
                 isDark
-                  ? 'text-display text-2xl text-cream/60'
-                  : 'text-display text-2xl text-ink/60'
+                  ? 'text-sm font-semibold uppercase tracking-widest text-white/50'
+                  : 'text-sm font-semibold uppercase tracking-widest text-white/30'
               }
             >
               {item}
