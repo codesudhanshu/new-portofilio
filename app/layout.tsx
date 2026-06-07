@@ -15,7 +15,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Biech Software Technologies Pvt. Ltd. | Software, Marketing & Staffing — Greater Noida',
+    default: 'Biech Software Technologies Pvt. Ltd.',
     template: '%s | Biech Software Technologies',
   },
   description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     apple: '/logo.png',
   },
   openGraph: {
-    title: 'Biech Software Technologies Pvt. Ltd. | Software, Marketing & Staffing',
+    title: 'Biech Software Technologies Pvt. Ltd.',
     description:
       'Enterprise digital transformation since 2015 — custom software, performance marketing & engineering talent. Serving ambitious companies across India, US, UK & GCC from Greater Noida.',
     url: 'https://biech.in',
