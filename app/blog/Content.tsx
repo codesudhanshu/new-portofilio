@@ -24,7 +24,7 @@ export default function BlogContent() {
             transition={{ duration: 0.45 }}
           >
             <span className="section-label">Insights</span>
-            <h1 className="mt-3 text-[clamp(32px,4.5vw,56px)] font-black tracking-[-0.03em] text-[#0F0F0F]">
+            <h1 className="mt-3 text-[clamp(32px,4.5vw,56px)] font-black tracking-[-0.03em] text-white">
               From the Biech team.
             </h1>
             <p className="mt-4 max-w-xl text-base text-white/50">
@@ -50,7 +50,7 @@ export default function BlogContent() {
                 <span className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[featured.category] ?? 'bg-ink/5 text-white/50'}`}>
                   {featured.category}
                 </span>
-                <h2 className="mt-4 text-[clamp(22px,2.8vw,32px)] font-black leading-tight tracking-[-0.02em] text-[#0F0F0F] group-hover:text-vermilion transition-colors">
+                <h2 className="mt-4 text-[clamp(22px,2.8vw,32px)] font-black leading-tight tracking-[-0.02em] text-white group-hover:text-vermilion transition-colors">
                   {featured.title}
                 </h2>
                 <p className="mt-3 text-base leading-relaxed text-white/50">
@@ -94,7 +94,7 @@ export default function BlogContent() {
                   <span className={`inline-flex w-fit rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[post.category] ?? 'bg-ink/5 text-white/50'}`}>
                     {post.category}
                   </span>
-                  <h2 className="mt-4 flex-1 text-lg font-bold leading-snug tracking-tight text-[#0F0F0F] group-hover:text-vermilion transition-colors">
+                  <h2 className="mt-4 flex-1 text-lg font-bold leading-snug tracking-tight text-white group-hover:text-vermilion transition-colors">
                     {post.title}
                   </h2>
                   <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/45">

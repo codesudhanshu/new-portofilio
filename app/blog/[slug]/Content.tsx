@@ -28,7 +28,7 @@ export default function PostContent({ post }: { post: BlogPost }) {
           >
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-white/45 transition-colors hover:text-[#0F0F0F]"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-white/45 transition-colors hover:text-white"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -45,7 +45,7 @@ export default function PostContent({ post }: { post: BlogPost }) {
               <span className="text-sm text-white/35">{post.readTime}</span>
             </div>
 
-            <h1 className="mt-5 text-[clamp(28px,4vw,48px)] font-black leading-[1.06] tracking-[-0.03em] text-[#0F0F0F] text-balance">
+            <h1 className="mt-5 text-[clamp(28px,4vw,48px)] font-black leading-[1.06] tracking-[-0.03em] text-white text-balance">
               {post.title}
             </h1>
 
@@ -54,10 +54,10 @@ export default function PostContent({ post }: { post: BlogPost }) {
             </p>
 
             <div className="mt-6 flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-vermilion text-sm font-bold text-[#0F0F0F]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-vermilion text-sm font-bold text-white">
                 B
               </div>
-              <span className="text-sm font-medium text-[#0F0F0F]">{post.author}</span>
+              <span className="text-sm font-medium text-white">{post.author}</span>
             </div>
           </motion.div>
         </div>
@@ -75,7 +75,7 @@ export default function PostContent({ post }: { post: BlogPost }) {
             {post.sections.map((s, i) => (
               <div key={i} className="mb-8">
                 {s.heading && (
-                  <h2 className="mb-3 text-xl font-bold tracking-tight text-[#0F0F0F]">
+                  <h2 className="mb-3 text-xl font-bold tracking-tight text-white">
                     {s.heading}
                   </h2>
                 )}
@@ -89,7 +89,7 @@ export default function PostContent({ post }: { post: BlogPost }) {
           {/* CTA inside post */}
           <div className="mt-14 rounded-2xl border border-white/8 bg-[#161c2a] p-8">
             <span className="section-label">Work with us</span>
-            <h3 className="mt-2 text-2xl font-black tracking-tight text-[#0F0F0F]">
+            <h3 className="mt-2 text-2xl font-black tracking-tight text-white">
               Have a project in mind?
             </h3>
             <p className="mt-2 text-base text-white/50">
@@ -106,7 +106,7 @@ export default function PostContent({ post }: { post: BlogPost }) {
       {related.length > 0 && (
         <section className="border-t border-white/8 py-12 md:py-16">
           <div className="container-x">
-            <h2 className="text-lg font-bold text-[#0F0F0F]">More from {post.category}</h2>
+            <h2 className="text-lg font-bold text-white">More from {post.category}</h2>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               {related.map((p) => (
                 <Link
@@ -114,7 +114,7 @@ export default function PostContent({ post }: { post: BlogPost }) {
                   href={`/blog/${p.slug}`}
                   className="group rounded-xl border border-white/8 p-5 transition-all duration-200 hover:border-vermilion/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
                 >
-                  <h3 className="font-bold text-[#0F0F0F] group-hover:text-vermilion transition-colors">
+                  <h3 className="font-bold text-white group-hover:text-vermilion transition-colors">
                     {p.title}
                   </h3>
                   <p className="mt-1.5 line-clamp-2 text-sm text-white/45">{p.excerpt}</p>

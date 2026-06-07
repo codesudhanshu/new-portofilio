@@ -22,7 +22,7 @@ export default function Content() {
         <div className="container-x">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
             <span className="section-label">Legal · Terms</span>
-            <h1 className="mt-3 text-[clamp(32px,4.5vw,56px)] font-black tracking-[-0.03em] text-[#0F0F0F]">Terms &amp; Conditions</h1>
+            <h1 className="mt-3 text-[clamp(32px,4.5vw,56px)] font-black tracking-[-0.03em] text-white">Terms &amp; Conditions</h1>
             <p className="mt-3 text-sm text-white/35">{company.legal} · Last updated: May 2025</p>
           </motion.div>
         </div>
@@ -42,7 +42,7 @@ export default function Content() {
               >
                 <div className="flex items-baseline gap-4">
                   <span className="text-xs font-bold text-vermilion">{String(i + 1).padStart(2, '0')}</span>
-                  <h2 className="text-xl font-bold tracking-tight text-[#0F0F0F]">{s.title}</h2>
+                  <h2 className="text-xl font-bold tracking-tight text-white">{s.title}</h2>
                 </div>
                 <p className="mt-4 text-[15px] leading-relaxed text-white/50">{s.body}</p>
               </motion.div>
@@ -60,7 +60,7 @@ export default function Content() {
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/35">Questions about these terms</p>
             <p className="mt-3 text-base text-white/55">
               Write to{' '}
-              <a href={`mailto:${company.email}`} className="font-semibold text-[#0F0F0F] underline decoration-vermilion underline-offset-4 transition-colors hover:text-vermilion">
+              <a href={`mailto:${company.email}`} className="font-semibold text-white underline decoration-vermilion underline-offset-4 transition-colors hover:text-vermilion">
                 {company.email}
               </a>{' '}
               with the subject "Legal Query". We will respond within five working days.

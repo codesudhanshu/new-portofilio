@@ -98,7 +98,7 @@ export default function Content() {
       <section className="border-b border-white/8 bg-[#0B0F19] py-20 md:py-28">
         <div className="container-x">
           <span className="section-label">What we have shipped</span>
-          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-[#0F0F0F]">
+          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-white">
             50+ projects. Six below.
           </h2>
           <p className="mt-3 max-w-2xl text-base text-white/50">
@@ -120,12 +120,12 @@ export default function Content() {
                     {p.service}
                   </span>
                 </div>
-                <h3 className="mt-4 text-xl font-bold tracking-tight text-[#0F0F0F]">{p.name}</h3>
+                <h3 className="mt-4 text-xl font-bold tracking-tight text-white">{p.name}</h3>
                 <p className="mt-0.5 text-xs text-white/35">{p.client}</p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-white/50">{p.detail}</p>
                 <div className="mt-5 rounded-xl border-l-2 border-vermilion bg-[#0B0F19] px-4 py-3">
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-white/35">Result</p>
-                  <p className="mt-1 text-sm font-semibold text-[#0F0F0F]">{p.result}</p>
+                  <p className="mt-1 text-sm font-semibold text-white">{p.result}</p>
                 </div>
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {p.tags.map((tag) => (
@@ -155,7 +155,7 @@ export default function Content() {
                 className="rounded-xl border border-white/8 bg-[#161c2a] p-6"
               >
                 <span className="text-xs font-bold text-vermilion">{item.n}</span>
-                <h3 className="mt-2 font-bold text-[#0F0F0F]">{item.title}</h3>
+                <h3 className="mt-2 font-bold text-white">{item.title}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-white/50">{item.body}</p>
               </motion.div>
             ))}

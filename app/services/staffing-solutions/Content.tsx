@@ -18,7 +18,7 @@ export default function Content() {
       <section className="border-b border-white/8 bg-[#0B0F19] py-20 md:py-28">
         <div className="container-x">
           <span className="section-label">How it works</span>
-          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-[#0F0F0F]">
+          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-white">
             Three steps, no recruiter theatre.
           </h2>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -32,7 +32,7 @@ export default function Content() {
                 className="rounded-2xl border border-white/8 bg-[#161c2a] p-7"
               >
                 <span className="text-4xl font-black tracking-tight text-vermilion">{step.n}</span>
-                <h3 className="mt-4 text-xl font-bold tracking-tight text-[#0F0F0F]">{step.title}</h3>
+                <h3 className="mt-4 text-xl font-bold tracking-tight text-white">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/50">{step.body}</p>
               </motion.div>
             ))}
@@ -44,7 +44,7 @@ export default function Content() {
       <section className="border-b border-white/8 bg-[#0F1624] py-20 md:py-28">
         <div className="container-x">
           <span className="section-label">Roles we place</span>
-          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-[#0F0F0F]">
+          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-white">
             Senior, mid, sometimes junior — when the fit is right.
           </h2>
           <p className="mt-4 max-w-2xl text-base text-white/50">
@@ -58,7 +58,7 @@ export default function Content() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.3, delay: i * 0.02 }}
-                className="inline-flex items-center rounded-full border border-white/8 bg-[#0B0F19] px-4 py-1.5 text-sm font-medium text-white/55 transition-colors hover:border-vermilion/40 hover:text-[#0F0F0F]"
+                className="inline-flex items-center rounded-full border border-white/8 bg-[#0B0F19] px-4 py-1.5 text-sm font-medium text-white/55 transition-colors hover:border-vermilion/40 hover:text-white"
               >
                 {role}
               </motion.span>

@@ -18,7 +18,7 @@ export default function Content() {
       <section className="border-b border-white/8 bg-[#0B0F19] py-20 md:py-28">
         <div className="container-x">
           <span className="section-label">Channels we run</span>
-          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-[#0F0F0F]">
+          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-white">
             Six disciplines, one accountable team.
           </h2>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -32,7 +32,7 @@ export default function Content() {
                 className="rounded-2xl border border-white/8 bg-[#161c2a] p-6 transition-shadow hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
               >
                 <div className="h-1 w-8 rounded-full bg-vermilion" />
-                <h3 className="mt-5 text-lg font-bold tracking-tight text-[#0F0F0F]">{o.title}</h3>
+                <h3 className="mt-5 text-lg font-bold tracking-tight text-white">{o.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/50">{o.body}</p>
               </motion.div>
             ))}
@@ -44,7 +44,7 @@ export default function Content() {
       <section className="border-b border-white/8 bg-[#0F1624] py-20 md:py-28">
         <div className="container-x">
           <span className="section-label">{marketing.results.eyebrow}</span>
-          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-[#0F0F0F]">
+          <h2 className="mt-3 text-[clamp(26px,3.5vw,40px)] font-black tracking-[-0.03em] text-white">
             We measure what we ship.
           </h2>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
